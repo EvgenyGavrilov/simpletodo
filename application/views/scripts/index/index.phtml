@@ -1,0 +1,31 @@
+<div class="new_task"><button onclick="editForm.GetInstance().show(0)">Создать задачу</button></div>
+<table class="list-task">
+	<tr>
+		<th>№</th>
+		<th>Название</th>
+		<th>Дата создания</th>
+		<th>Срок сдачи</th>
+		<th>Дата выполнения</th>
+		<th></th>
+	</tr>
+	<?php
+	foreach ($this->tasks as $task) {
+		?>
+		<tr class="row" id="task_<?php echo $task->id; ?>">
+			<td class="center"><?php echo $task->id; ?></td>
+			<td>
+				<span class="title fake_link" onclick="showDescription(<?php echo $task->id ?>)"><?php echo $task->title; ?></span>
+				<div class="description"><?php echo $task->description; ?></div>
+			</td>
+			<td class="time_add"><?php echo date("d.m.Y", $task->time_add); ?></td>
+			<td class="time_completed"><?php echo !is_null($task->time_completed) ? date("d.m.Y", $task->time_completed) : ''; ?></td>
+			<td class="time_execution"><?php echo !is_null($task->time_execution) ? date("d.m.Y", $task->time_execution) : ''; ?></td>
+			<td class="action">
+				<img src="/i/edit.gif" alt="edit" title="Редактировать" width="16" height="16" onclick="editForm.GetInstance().show(<?php echo $task->id; ?>)"/>
+				<img src="/i/delete.gif" alt="delete" title="Удалить" width="16" height="16" onclick="deleteTask(<?php echo $task->id; ?>)"/>
+			</td>
+		</tr>
+		<?php
+	}
+	?>
+</table>

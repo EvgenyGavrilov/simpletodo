@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+* { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 100%;  }
+
+img { border: none; }
+
+body { font-size: 14px; background: url("../i/background.png") repeat-x #A5DDF8; }
+
+.fake_link, a { color: #027BC1; text-decoration: none; cursor: pointer; }
+.fake_link:hover, a:hover { color: #000000 ;text-decoration: underline; }
+.center { text-align: center; }
+
+#page { width: 70%; margin: 0 auto; }
+#header a { color: #fff; text-decoration: none; font-weight: bold; font-size: 3em; font-family: "Trebuchet MS", Arial, Tahoma, sans-serif; letter-spacing: -0.1em; }
+
+#content { padding: 10px; border-bottom: 2px solid #7BA5C6; border-right: 2px solid #7BA5C6; margin: 10px 0; background: #fff; }
+
+#content h1 { clear: both; margin: 0em 0em 0em 0em; padding: 0.5em 0em 0em 0.1em; font-size: 1.7em; font-family: "Trebuchet MS", Arial, sans-serif; color: #FF6300; border-bottom: 0.05em solid #FF9853; line-height: 1em; }
+
+#path { padding: 5px 10px; font-size: 85%; color: #2F5E80; background-color: #D0E7F4; border-right: 2px solid #7BA5C6; }
+#path a { margin: 0 5px; }
+#path a:first-child { margin-left: 0; }
+
+.list-task { border-collapse: collapse; border-spacing: 0; width: 100%; }
+.list-task td { padding: 3px 5px; border: 1px solid #dadfe0; }
+.list-task th { padding: 3px 5px; background-color: #d0e7f4; border: 1px solid #dadfe0; }
+.list-task .action { text-align: center; }
+.list-task .action img { margin: 0 5px; cursor: pointer; }
+.list-task .row { background-color: #fff; }
+.list-task .row:hover { background-color: #e8ecf1; }
+.list-task .description { display: none; }
+
+.win_popup { min-width: 200px; min-height: 200px; position: absolute; top: 200px; left: 200px; background: #f2f2f2; border: 1px solid #808080; border-radius: 5px 5px 0 0; box-shadow: 0 0 10px rgba(0,0,0,0.5); display: none; }
+.win_popup .title { border-bottom: 1px solid #808080; font-size: 16px; padding: 3px 5px; font-weight: bold; background: #d4d8e2; border-radius: 5px 5px 0 0; position: relative; text-shadow: 1px 1px 2px #fff; height: 17px; }
+.win_popup .body { padding: 5px; }
+.win_popup .close_btn { background: url("../i/closebutton.png") no-repeat; width: 14px; height: 14px; position: absolute; top: 3px; right: 3px; cursor: pointer; }
+.win_popup .close_btn:hover { background-position: -14px 0; }
+
+.edit_form { border-spacing: 0; border-collapse: collapse; }
+.edit_form td { padding: 5px 5px; }
+.edit_form input, .edit_form textarea { display: block; width: 100%; }
+.edit_form textarea { height: 100px; }
+
+.new_task { text-align: right; margin: 10px 0 20px 0; }
