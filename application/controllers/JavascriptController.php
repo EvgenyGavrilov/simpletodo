@@ -18,7 +18,7 @@ class JavascriptController extends Zend_Controller_Action {
 			
 	public function indexAction() {
 		$path = getcwd()."/js/";
-		$this->getResponse()->setRawHeader('Content-Type: text/javascript; charset=windows-1251');
+		$this->getResponse()->setRawHeader('Content-Type: text/javascript; charset=utf-8');
 		foreach ($this->js as $js) {
 			$file = $path.$js.".js";
 			if (!file_exists($file)) continue;
